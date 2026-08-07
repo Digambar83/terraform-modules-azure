@@ -1,0 +1,102 @@
+[
+ {
+  "RuleID": "terraform-admin-password",
+  "Description": "Terraform hardcoded admin_password",
+  "StartLine": 137,
+  "EndLine": 137,
+  "StartColumn": 6,
+  "EndColumn": 53,
+  "Match": "admin_password                = \"Password@12345\"",
+  "Secret": "admin_password                = \"Password@12345\"",
+  "File": "environment/preprod/terraform.tfvars",
+  "SymlinkFile": "",
+  "Commit": "119f4d13e63791b8d45244f298cce85273147e37",
+  "Link": "https://github.com/Digambar83/terraform-modules-azure/blob/119f4d13e63791b8d45244f298cce85273147e37/environment/preprod/terraform.tfvars#L137",
+  "Entropy": 3.6058657,
+  "Author": "Digambar Dhokare",
+  "Email": "digambardhokare@gmail.com",
+  "Date": "2026-08-06T19:03:06Z",
+  "Message": "remove tfvars",
+  "Tags": [
+   "terraform",
+   "password",
+   "credential"
+  ],
+  "Fingerprint": "119f4d13e63791b8d45244f298cce85273147e37:environment/preprod/terraform.tfvars:terraform-admin-password:137"
+ },
+ {
+  "RuleID": "terraform-admin-password",
+  "Description": "Terraform hardcoded admin_password",
+  "StartLine": 157,
+  "EndLine": 157,
+  "StartColumn": 6,
+  "EndColumn": 53,
+  "Match": "admin_password                = \"Password@12345\"",
+  "Secret": "admin_password                = \"Password@12345\"",
+  "File": "environment/preprod/terraform.tfvars",
+  "SymlinkFile": "",
+  "Commit": "119f4d13e63791b8d45244f298cce85273147e37",
+  "Link": "https://github.com/Digambar83/terraform-modules-azure/blob/119f4d13e63791b8d45244f298cce85273147e37/environment/preprod/terraform.tfvars#L157",
+  "Entropy": 3.6058657,
+  "Author": "Digambar Dhokare",
+  "Email": "digambardhokare@gmail.com",
+  "Date": "2026-08-06T19:03:06Z",
+  "Message": "remove tfvars",
+  "Tags": [
+   "terraform",
+   "password",
+   "credential"
+  ],
+  "Fingerprint": "119f4d13e63791b8d45244f298cce85273147e37:environment/preprod/terraform.tfvars:terraform-admin-password:157"
+ },
+ {
+  "RuleID": "terraform-admin-password",
+  "Description": "Terraform hardcoded admin_password",
+  "StartLine": 121,
+  "EndLine": 121,
+  "StartColumn": 6,
+  "EndColumn": 53,
+  "Match": "admin_password                = \"Password@12345\"",
+  "Secret": "admin_password                = \"Password@12345\"",
+  "File": "environment/prod/terraform.tfvars",
+  "SymlinkFile": "",
+  "Commit": "119f4d13e63791b8d45244f298cce85273147e37",
+  "Link": "https://github.com/Digambar83/terraform-modules-azure/blob/119f4d13e63791b8d45244f298cce85273147e37/environment/prod/terraform.tfvars#L121",
+  "Entropy": 3.6058657,
+  "Author": "Digambar Dhokare",
+  "Email": "digambardhokare@gmail.com",
+  "Date": "2026-08-06T19:03:06Z",
+  "Message": "remove tfvars",
+  "Tags": [
+   "terraform",
+   "password",
+   "credential"
+  ],
+  "Fingerprint": "119f4d13e63791b8d45244f298cce85273147e37:environment/prod/terraform.tfvars:terraform-admin-password:121"
+ },
+ {
+  "RuleID": "terraform-admin-password",
+  "Description": "Terraform hardcoded admin_password",
+  "StartLine": 141,
+  "EndLine": 141,
+  "StartColumn": 6,
+  "EndColumn": 53,
+  "Match": "admin_password                = \"Password@12345\"",
+  "Secret": "admin_password                = \"Password@12345\"",
+  "File": "environment/prod/terraform.tfvars",
+  "SymlinkFile": "",
+  "Commit": "119f4d13e63791b8d45244f298cce85273147e37",
+  "Link": "https://github.com/Digambar83/terraform-modules-azure/blob/119f4d13e63791b8d45244f298cce85273147e37/environment/prod/terraform.tfvars#L141",
+  "Entropy": 3.6058657,
+  "Author": "Digambar Dhokare",
+  "Email": "digambardhokare@gmail.com",
+  "Date": "2026-08-06T19:03:06Z",
+  "Message": "remove tfvars",
+  "Tags": [
+   "terraform",
+   "password",
+   "credential"
+  ],
+  "Fingerprint": "119f4d13e63791b8d45244f298cce85273147e37:environment/prod/terraform.tfvars:terraform-admin-password:141"
+ }
+]

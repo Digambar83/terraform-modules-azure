@@ -36,7 +36,7 @@ resource "azurerm_linux_virtual_machine" "vm_details" {
   size                            = each.value.size
   admin_username                  = each.value.admin_username
   network_interface_ids           = [azurerm_network_interface.vms[each.key].id, ]
-  admin_password                  = each.value.admin_password
+  admin_password                  = data.azurerm_key_vault_secret.admin_password[each.key].value
   disable_password_authentication = false
 
 
