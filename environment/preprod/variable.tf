@@ -5,4 +5,7 @@ variable "pip_details" {}
 variable "bastion_details" {}
 variable "nsg_details" {}
 variable "nsg_association_details" {}
+variable "key_vault" {}
 variable "vms_details" {}
+variable "load_balancers" {}
+variable "app_gateways" {}

@@ -4,7 +4,7 @@ rgs = {
     location   = "centralindia"
     managed_by = "terraform"
   }
-   rg2 = {
+  rg2 = {
     name       = "pre-prod"
     location   = "centralindia"
     managed_by = "terraform"
@@ -48,10 +48,23 @@ subnets = {
     address_prefixes     = ["10.23.3.0/24"]
     name                 = "AzureBastionSubnet"
   }
+   subnet4 = {
+    resource_group_name  = "dev"
+    virtual_network_name = "devvnet1"
+    address_prefixes     = ["10.23.3.0/24"]
+    name                 = "loadbalancersubnet"
+  }
 }
 pip_details = {
   pip1 = {
     name                = "bastionpip1"
+    resource_group_name = "dev"
+    location            = "centralindia"
+    allocation_method   = "Static"
+    sku                 = "Standard"
+  }
+  pip1 = {
+    name                = "pip-appgw-dev"
     resource_group_name = "dev"
     location            = "centralindia"
     allocation_method   = "Static"
@@ -141,7 +154,8 @@ vms_details = {
     offer                         = "0001-com-ubuntu-server-jammy"
     sku                           = "22_04-lts"
     version                       = "latest"
-
+    key_vault_name                = "pre-prod_kv"
+    secret_name                   = "admin-password"
   }
   vm2 = {
     nic_name                      = "nsg2"
@@ -161,5 +175,34 @@ vms_details = {
     offer                         = "0001-com-ubuntu-server-jammy"
     sku                           = "22_04-lts"
     version                       = "latest"
+    key_vault_name                = "pre-prod_kv"
+    secret_name                   = "admin-password"
+  }
+}
+key_vault = {
+  kv1 = {
+    name                = "pre-prod-kv"
+    location            = "centralindia"
+    resource_group_name = "dev"
+    secret_name         = "admin-password"
+  }
+}
+load_balancers = {
+  lb1 = {
+    name        = "lb-backend-dev"
+    location    = "centralindia"
+    rg_name     = "dev"
+    subnet_name = "loadbalancersubnet"
+    vnet_name   = "devnet1"
+  }
+}
+app_gateways = {
+  appgw1 = {
+    name           = "appgw-dev"
+    location       = "centralindia"
+    rg_name        = "dev"
+    subnet_name    = "AppGatewaySubnet"
+    vnet_name      = "devvnet1"
+    public_ip_name = "pip-appgw-dev"
   }
 }
