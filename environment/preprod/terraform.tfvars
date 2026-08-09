@@ -4,22 +4,7 @@ rgs = {
     location   = "centralindia"
     managed_by = "terraform"
   }
-  rg2 = {
-    name       = "pre-prod"
-    location   = "centralindia"
-    managed_by = "terraform"
-  }
-  rg3 = {
-    name       = "pre-prod1"
-    location   = "centralindia"
-    managed_by = "terraform"
-  }
-  rg6 = {
-    name       = "pre-prod13"
-    location   = "centralindia"
-    managed_by = "terraform"
-  }
-  # test change
+  
 }
 virtual_network_details = {
   vnet1 = {
@@ -48,12 +33,19 @@ subnets = {
     address_prefixes     = ["10.23.3.0/24"]
     name                 = "AzureBastionSubnet"
   }
-   subnet4 = {
+   subnet7 = {
     resource_group_name  = "dev"
     virtual_network_name = "devvnet1"
-    address_prefixes     = ["10.23.3.0/24"]
+    address_prefixes     = ["10.23.6.0/24"]
     name                 = "loadbalancersubnet"
   }
+  subnet4 = {
+    resource_group_name  = "dev"
+    virtual_network_name = "devvnet1"
+    address_prefixes     = ["10.23.5.0/24"]
+    name                 = "AppGatewaySubnet"
+  }
+   
 }
 pip_details = {
   pip1 = {
@@ -153,7 +145,7 @@ vms_details = {
     offer                         = "0001-com-ubuntu-server-jammy"
     sku                           = "22_04-lts"
     version                       = "latest"
-    key_vault_name                = "pre-prod_kv"
+    key_vault_name                = "pre-prod-kv21"
     secret_name                   = "admin-password"
   }
   vm2 = {
@@ -173,13 +165,13 @@ vms_details = {
     offer                         = "0001-com-ubuntu-server-jammy"
     sku                           = "22_04-lts"
     version                       = "latest"
-    key_vault_name                = "pre-prod_kv"
+    key_vault_name                = "pre-prod-kv21"
     secret_name                   = "admin-password"
   }
 }
 key_vault = {
   kv1 = {
-    name                = "pre-prod-kv"
+    name                = "pre-prod-kv21"
     location            = "centralindia"
     resource_group_name = "dev"
     secret_name         = "admin-password"
@@ -191,7 +183,7 @@ load_balancers = {
     location    = "centralindia"
     rg_name     = "dev"
     subnet_name = "loadbalancersubnet"
-    vnet_name   = "devnet1"
+    vnet_name   = "devvnet1"
   }
 }
 app_gateways = {

@@ -24,7 +24,7 @@ module "nsg_details" {
   nsg_details = var.nsg_details
 }
 module "network_association" {
-  depends_on              = [var.nsg_details, module.subnets]
+  depends_on              = [module.nsg_details, module.subnets]
   source                  = "../../child module/azurerm_subnet_network_security_group_association"
   nsg_association_details = var.nsg_association_details
 }
@@ -41,7 +41,7 @@ module "vms" {
 }
 module "loadbalancer" {
   depends_on = [ module.subnets,module.vms ]
-  source = "../../child module/azurerm_load_balancer"
+  source = "../../child module/azurerm_lb"
   load_balancers = var.load_balancers
 }
 module "gateway" {

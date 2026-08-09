@@ -5,7 +5,7 @@ data "azurerm_subnet" "subnet" {
   resource_group_name  = each.value.rg_name
 }
 resource "azurerm_lb" "lb" {
-  for_each            = var.load_balancers
+    for_each            = var.load_balancers
   name                = each.value.name
   location            = each.value.location
   resource_group_name = each.value.rg_name
