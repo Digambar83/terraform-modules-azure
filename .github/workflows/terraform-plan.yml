@@ -27,13 +27,13 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Terraform Init
-        working-directory: ./environment  
+        working-directory: ./environment/pre-prod  
         run: terraform init
 
       - name: Terraform Validate
-        working-directory: ./environment
+        working-directory: ./environment/pre-prod
         run: terraform validate
 
       - name: Terraform Plan
-        working-directory: ./environment
+        working-directory: ./environment/pre-prod
         run: terraform plan
